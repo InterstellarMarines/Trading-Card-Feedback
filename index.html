@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Interstellar Marines Trading Card Feedback</title>
+	<link href="dependencies/shared_global.css" rel="stylesheet" type="text/css">
+	<link href="dependencies/globalv2.css" rel="stylesheet" type="text/css">
+	<link href="dependencies/profilev2.css" rel="stylesheet" type="text/css">
+	<link href="dependencies/motiva_sans.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="dependencies/jquery.js"></script>
+	<script type="text/javascript" src="feedback.js"></script>
+</head>
+<body class="flat_page profile_page">
+	<div id="modalBG" style="display: none"></div>
+	<div id="theBgImage" class="no_header profile_page has_profile_background" style="background-image: url( 'images/backgrounds/1.jpg' );">
+		<div class="profile_header_bg">
+			<div class="profile_header_bg_texture">
+				<div class="profile_header">
+					<div class="profile_header_content">
+						<div class="playerAvatar profile_header_size in-game">
+							<img src="dependencies/group_full.jpg">
+						</div>
+						<div class="profile_header_badgeinfo">
+							<div class="persona_name persona_level">Level
+								<div class="friendPlayerLevel lvl_0"><span class="friendPlayerLevelNum">1</span></div>
+							</div>
+							<div class="profile_header_badge">
+								<div class="favorite_badge">
+									<div class="favorite_badge_icon">
+
+										<img src="dependencies/1.png">
+									</div>
+									<div class="favorite_badge_description">
+										<div class="name"><a class="whiteLink" href="#">Game Mechanic</a></div>
+										<div class="xp">1 XP</div>
+									</div>
+								</div>
+							</div>
+							<div class="profile_header_actions">
+							</div>
+						</div>
+						<div class="profile_header_summary">
+							<div class="persona_name" style="font-size: 24px;">Interstellar Marines Card Feedback</div>
+							<div style="height: 64px;" class="profile_summary">Thanks for taking the time to leave your thoughts!<br><br>Click through the different backgrounds and cards to test them out and fill in the forms to leave feedback.</div>
+							<div style="display: none;" class="profile_summary_footer">
+								<span class="whiteLink">View more info</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="profile_content has_profile_background">
+			<div class="profile_background_holder_content">
+				<div class="profile_background_overlay_content"></div>
+				<div id="bgImgToChange" class="profile_background_image_content " style="background-image: url('images/backgrounds/1.jpg');">
+				</div>
+			</div>
+			<div class="profile_content_inner">
+				<div class="profile_leftcol">
+					<div class="profile_customization_area">
+						<div class="profile_customization">
+							<div class="profile_customization_header ellipsis">
+								BACKGROUND FEEDBACK
+							</div>
+							<div class="profile_customization_block">
+								<div class="customtext_showcase">
+									<div class="showcase_content_bg showcase_notes" style="max-height:10000px;">
+										<div style="display:inline-block; float:right;">
+											<input id="prev-bg" type="button" value="Previous Background" style="width:225px;" /><br />
+											<input id="next-bg" type="button" value="Next Background" style="width:225px;" />
+										</div>
+										<a href="#" id="changeBg01" class="backgroundChanger">01. Earth from Space</a><br />
+										<a href="#" id="changeBg02" class="backgroundChanger">02. Marines in Hallway</a><br />
+										<a href="#" id="changeBg03" class="backgroundChanger">03. Marines on the Moon</a><br />
+										<a href="#" id="changeBg04" class="backgroundChanger">04. Mars Colony</a><br />
+										<a href="#" id="changeBg05" class="backgroundChanger">05. Photo Session</a><br />
+										<a href="#" id="changeBg06" class="backgroundChanger">06. Shark Creature</a><br />
+										<a href="#" id="changeBg07" class="backgroundChanger">07. Shark on Xeno-13</a><br />
+										<a href="#" id="changeBg08" class="backgroundChanger">08. Valhalla Landscape</a><br />
+										<a href="#" id="changeBg09" class="backgroundChanger">09. Valhalla Landscape with Moons</a><br />
+										<br />
+										<div class="bb_h1"></div>
+										<br />
+										<div id="bg-feedback-form">
+											<form id="bgFeedbackForm" name="bgFeedbackForm" method="post" action="">
+												<label style="color:#fff;">Feedback for background "<span id="currentBgTitle">Earth from Space</span>":<br /></label>
+												<label style="font-size: 12px; color: #808080;">
+													Some examples: 'too dark', 'boring image', or '[specific detail] is out of place and should be fixed'<br />
+													Please be descriptive and say what parts you like, dislike, or think should be changed or fixed.</label><br />
+												<textarea name="bgMessage" id="bgMessage" rows="4" style="margin-bottom: 10px; margin-top: 10px; width: 595px; max-width: 59px; min-width: 595px;"></textarea><br />
+												<label style="color:#fff;">Suggest a better background title:</label><br />
+												<input type="text" id="bg-name" name="bg-name" style="width: 400px; background-color:#fff; color:#000;" /><br /><br />
+												<label style="color:#fff;">Rating:</label><br />
+												<label style="font-size: 12px; color: #808080;">There will only be 5 final backgrounds so we need to pick the best; calling them all amazing isn't helpful</label><br />
+												<label><input type="radio" class="rating" name="rating" value="1" style="padding-top: 10px;" />Probably shouldn't be a final background</label><br />
+												<label><input type="radio" class="rating" name="rating" value="2" />Good but not great</label><br />
+												<label><input type="radio" class="rating" name="rating" value="3" />Amazing, and I would love to use this as my profile background!</label><br />
+												<input type="submit" name="submit" id="backgroundSubmitButton" value="Submit Feedback" style="margin-top: 10px; margin-bottom: 10px;" /><br />
+											</form>
+										</div>
+										<p id="bgAlert" style="color:#FF0000;">Please enable JavaScript</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="profile_customization">
+							<div class="profile_customization_header ellipsis">
+								TRADING CARD FEEDBACK
+							</div>
+							<div class="profile_customization_block">
+								<div class="customtext_showcase">
+									<div class="showcase_content_bg showcase_notes" style="max-height:10000px;">
+										<div style="float: right; display: inline-block;">
+											<div id="testCard" style="width: 224px; height: 261px;">
+												<div id="testCover" style="width: 224px; height: 261px; position: absolute; font-family: Arial, sans-serif; font-size: 12px;">
+													<img src="images/cover.png" />
+													<p id="selectedCardTitle" style="color:#fff; position: absolute; top: -3px; left: 15px;">Biological Research</p>
+												</div>
+												<div style="width: 206px; height: 184px; display: block; margin-left: auto; margin-right: auto;">
+													<img src="images/cards/1.png" width="206" height="184" id="displayedCard" style="margin-top: 26px;" />
+												</div>
+											</div>
+											<div style="display:inline-block; float:right;">
+												<br />
+												<input id="prev-card" type="button" value="Previous Card" style="width:225px;" /><br />
+												<input id="next-card" type="button" value="Next Card" style="width:225px;" />
+											</div>
+										</div>
+										<a href="#" id="changeCard01" class="cardChanger">01. Biological Research</a><br />
+										<a href="#" id="changeCard02" class="cardChanger">02. Exploration</a><br />
+										<a href="#" id="changeCard03" class="cardChanger">03. The Bridge</a><br />
+										<a href="#" id="changeCard04" class="cardChanger">04. Alien Combat</a><br />
+										<a href="#" id="changeCard05" class="cardChanger">05. Underground</a><br />
+										<a href="#" id="changeCard06" class="cardChanger">06. Carcharodon Polemos</a><br />
+										<a href="#" id="changeCard07" class="cardChanger">07. Scientist</a><br />
+										<a href="#" id="changeCard08" class="cardChanger">08. Facility</a><br />
+										<a href="#" id="changeCard09" class="cardChanger">09. Run to the Rocket!</a><br />
+										<a href="#" id="changeCard10" class="cardChanger">10. Interstellar Marines Team</a><br />
+										<a href="#" id="changeCard11" class="cardChanger">11. Access Shaft</a><br />
+										<a href="#" id="changeCard12" class="cardChanger">12. Hamster Complex</a><br />
+										<a href="#" id="changeCard13" class="cardChanger">13. Boarding the Megalodon</a><br />
+										<a href="#" id="changeCard14" class="cardChanger">14. Mars Colony</a><br />
+										<a href="#" id="changeCard15" class="cardChanger">15. Zero-Point Energy Reactor</a><br />
+										<a href="#" id="changeCard16" class="cardChanger">16. Arrow Star Spaceport</a><br />
+										<a href="#" id="changeCard17" class="cardChanger">17. Megalodon Landing</a><br />
+										<a href="#" id="changeCard18" class="cardChanger">18. City</a><br />
+										<a href="#" id="changeCard19" class="cardChanger">19. Valhalla</a><br />
+										<a href="#" id="changeCard20" class="cardChanger">20. AIV Kitty Hawk</a><br />
+										<a href="#" id="changeCard21" class="cardChanger">21. Cave Arena</a><br />
+										<br />
+										<div class="bb_h1"></div>
+										<br />
+										<div id="card-feedback-form">
+											<form id="cardFeedbackForm" name="cardFeedbackForm" method="post" action="">
+												<label style="color:#fff;">Feedback for trading card "<span id="selectedCardName">Biological Research</span>":<br /></label>
+												<label style="font-size: 12px; color: #808080;">
+													Some examples: 'too dark', 'boring image', or '[specific detail] is out of place and should be fixed'<br />
+													Please be descriptive and say what parts you like, dislike, or think should be changed or fixed.</label><br />
+												<textarea name="cardMessage" id="cardMessage" rows="4" style="margin-bottom: 10px; margin-top: 10px; width: 595px; max-width: 59px; min-width: 595px;"></textarea><br />
+												<label style="color:#fff;">Suggest a better card name:</label><br />
+												<input type="text" id="card-name" name="card-name" style="width: 400px; background-color:#fff; color:#000;" /><br /><br />
+												<label style="color:#fff;">Rating:</label><br />
+												<label style="font-size: 12px; color: #808080;">There will only be 5 - 9 final cards so we need to pick the best; calling them all amazing isn't helpful</label><br />
+												<label><input type="radio" class="rating" name="rating" value="1" style="padding-top: 10px;" />Probably shouldn't be one of the final cards</label><br />
+												<label><input type="radio" class="rating" name="rating" value="2" />Good but not great</label><br />
+												<label><input type="radio" class="rating" name="rating" value="3" />Amazing, and I would love to have this card!</label><br />
+												<input type="submit" name="submit" id="cardSubmitButton" value="Submit Feedback" style="margin-top: 10px; margin-bottom: 10px;" /><br />
+											</form>
+										</div>
+										<p id="cardAlert" style="color:#FF0000;">Please enable JavaScript</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="profile_customization">
+							<div class="profile_customization_header">
+								Favorite Game
+							</div>
+							<div class="profile_customization_block">
+								<div class="favoritegame_showcase">
+									<div class="showcase_content_bg">
+										<div class="favoritegame_showcase_game showcase_slot ">
+											<div class="favorite_game_cap">
+
+												<img src="dependencies/banner.jpg">
+											</div>
+											<div class="showcase_item_detail_title">
+												<a class="whiteLink" href="#">Interstellar Marines</a>
+											</div>
+										</div>
+										<div class="showcase_stats_row">
+											<div style="clear: left;"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="profile_customization">
+							<div class="profile_customization_header">
+								Favorite Group
+							</div>
+							<div class="profile_customization_block">
+								<div class="favoritegroup_showcase">
+									<div class="showcase_content_bg">
+										<div class="favoritegroup_showcase_group showcase_slot ">
+											<div class="favoritegroup_avatar">
+												<a href="#">
+													<img src="dependencies/group_full.jpg">
+												</a>
+											</div>
+											<div class="favoritegroup_content">
+												<div class="favoritegroup_namerow ellipsis">
+													<a class="favoritegroup_name whiteLink" href="#">Interstellar Marines</a>
+													- Public Group														
+												</div>
+												<div class="favoritegroup_description">
+													Interstellar Marines Community Group						
+												</div>
+												<div class="favoritegroup_stats showcase_stats_row">
+													<div class="showcase_stat">
+														<div class="value">100,000</div>
+														<div class="label">Members</div>
+													</div>
+													<div class="showcase_stat favoritegroup_ingame">
+														<div class="value">50,000</div>
+														<div class="label">In-Game</div>
+													</div>
+													<div class="showcase_stat favoritegroup_online">
+														<div class="value">50,000</div>
+														<div class="label">Online</div>
+													</div>
+													<div class="showcase_stat favoritegroup_inchat">
+														<div class="value">0</div>
+														<div class="label">In Chat</div>
+													</div>
+													<div style="clear: left;"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="profile_recentgame_header profile_leftcol_header">
+						<div class="recentgame_quicklinks">
+							<h2>336 hours past 2 weeks</h2>
+						</div>
+						<h2>Recent Game Activity</h2>
+					</div>
+					<div class="recent_games">
+						<div class="recent_game">
+							<div class="recent_game_content">
+								<div class="game_info">
+									<div class="game_info_cap"><a href="#">
+										<img src="dependencies/banner.jpg"></a></div>
+									<div class="game_info_details">
+										1,000 hrs on record<br>
+										Currently In-Game																		
+									</div>
+									<div class="game_name"><a class="whiteLink" href="#">Interstellar Marines</a></div>
+								</div>
+								<div class="game_info_stats">
+									<div class="game_info_stats_publishedfilecounts">
+										<span class="published_file_count_ctn">
+											<span class="published_file_icon video"></span>
+											<a class="published_file_link" href="#">Videos 0</a>
+										</span>
+										<span class="published_file_count_ctn">
+											<span class="published_file_icon screenshot"></span>
+											<a class="published_file_link" href="#">Screenshots 0</a>
+										</span>
+										<span class="published_file_count_ctn">
+											<span class="published_file_icon artwork"></span>
+											<a class="published_file_link" href="#">Artwork 0</a>
+										</span>
+										<span class="published_file_count_ctn">
+											<span class="published_file_icon guide"></span>
+											<a class="published_file_link" href="#">Guide 0</a>
+										</span>
+										<span class="published_file_count_ctn">
+											<span class="published_file_icon recommendation"></span>
+											<a class="published_file_link" href="#">Recommendation 1</a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="recentgame_quicklinks">
+							View:						<a class="whiteLink" href="#">All 1 Game</a>
+							| <a class="whiteLink" href="#">Wishlist</a>
+							| <a class="whiteLink" href="#">Recommendations</a>
+						</div>
+						<div style="clear: right;"></div>
+					</div>
+					<div class="profile_comment_area">
+						<div class="commentthread_area" id="commentthread_Profile_76561198020318156_0_area">
+							<div class="commentthread_header">
+								<div class="commentthread_count">
+									<span class="commentthread_header_label">Comments</span>
+								</div>
+								<div style="clear: both;"></div>
+							</div>
+							<div class="commentthread_comment_container" id="commentthread_Profile_76561198020318156_0_postcontainer">
+								<div class="commentthread_comments" id="commentthread_Profile_76561198020318156_0_posts">
+
+									<div class="commentthread_comment  " id="comment_846960628398605780" style="">
+										<div class="commentthread_comment_avatar playerAvatar in-game">
+											<a href="#">
+												<img src="dependencies/group_small.jpg">
+											</a>
+										</div>
+										<div class="commentthread_comment_content">
+											<div class="commentthread_comment_author">
+												<a class="hoverunderline commentthread_author_link" href="#">Background Test</a>
+											</div>
+											<div class="commentthread_comment_text" id="comment_content_846960628398605780">
+												This is a profile comment! The following are samples of potential emoticon designs. We need your feedback on them too.<br />
+												Bullseye Target: 
+												<img class="emoticon" src="images/emoticons/bullseye.png"><br />
+												ITO Icon: 
+												<img class="emoticon" src="images/emoticons/ito.png"><br />
+												WARN (Skull & Crossbone) Icon: 
+												<img class="emoticon" src="images/emoticons/warn.png"><br />
+												Red Dot Scope: 
+												<img class="emoticon" src="images/emoticons/rds.png"><br />
+												Shark Mouth: 
+												<img class="emoticon" src="images/emoticons/shark.png"><br />
+												Marine Helmet: 
+												<img class="emoticon" src="images/emoticons/marine.png"><br />
+												Support Medal: 
+												<img class="emoticon" src="images/emoticons/medal.png"><br />
+												Frontliner Badge: 
+												<img class="emoticon" src="images/emoticons/frontliner.png"><br />
+												Spearhead Badge: 
+												<img class="emoticon" src="images/emoticons/spearhead.png"><br />
+												View the full chart of emoticons <a href="images/emoticons/emoticons_chart.png" class="workingLink" target="_blank">here</a>. Be sure to leave your feedback 
+												<a href="http://steamcommunity.com/app/236370/discussions/0/864973123312682484/" class="workingLink" target="_blank">here</a>. Thanks!
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="commentthread_footer">
+								<div style="clear: both;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="profile_rightcol">
+					<div class="profile_in_game persona in-game">
+						<div class="profile_in_game_header">Currently In-Game</div>
+						<div class="profile_in_game_name">Interstellar Marines</div>
+					</div>
+					<div class="profile_count_link">
+						<a href="#">
+							<span class="count_link_label">Badges</span>&nbsp;
+							<span class="profile_count_link_total">0</span>
+						</a>
+					</div>
+					<div class="profile_item_links">
+						<div class="profile_count_link">
+							<a href="#">
+								<span class="count_link_label">Games</span>&nbsp;
+								<span class="profile_count_link_total">1</span>
+							</a>
+						</div>
+						<div class="profile_count_link">
+							<a href="#">
+								<span class="count_link_label">Screenshots</span>&nbsp;
+								<span class="profile_count_link_total">0</span>
+							</a>
+						</div>
+						<div class="profile_count_link">
+							<a href="#">
+								<span class="count_link_label">Videos</span>&nbsp;
+								<span class="profile_count_link_total">0</span>
+							</a>
+						</div>
+						<div class="profile_count_link">
+							<a href="#">
+								<span class="count_link_label">Recommendations</span>&nbsp;
+								<span class="profile_count_link_total">1</span>
+							</a>
+						</div>
+						<div class="profile_count_link">
+							<a href="#">
+								<span class="count_link_label">Guides</span>&nbsp;
+								<span class="profile_count_link_total">0</span>
+							</a>
+						</div>
+						<div class="profile_count_link">
+							<a href="#">
+								<span class="count_link_label">Artwork</span>&nbsp;
+								<span class="profile_count_link_total">0</span>
+							</a>
+						</div>
+						<div class="profile_count_link">
+							<a href="#">
+								<span class="count_link_label">Inventory</span>&nbsp;
+								<span class="profile_count_link_total">0</span>
+							</a>
+						</div>
+					</div>
+					<div class="profile_group_links">
+						<div class="profile_count_link">
+							<a href="#">
+								<span class="count_link_label">Groups</span>&nbsp;
+								<span class="profile_count_link_total">1</span>
+							</a>
+						</div>
+						<div class="profile_group profile_primary_group">
+							<div class="profile_group_avatar">
+								<a href="#">
+									<img src="dependencies/group_medium.jpg">
+								</a>
+							</div>
+							<a class="whiteLink" href="#">Interstellar Marines</a>
+							<br>
+							100,000 Members					
+							<div style="clear: left;"></div>
+						</div>
+					</div>
+					<div class="profile_friend_links">
+						<div class="profile_count_link">
+							<a href="#">
+								<span class="count_link_label">Friends</span>&nbsp;
+								<span class="profile_count_link_total">0</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+	</div>
+	<div id="footer_spacer"></div>
+	<div id="footer">
+		<div class="footer_content">
+			<span>This website is modified from an official Steam profile. This page is not run by Valve. It is for testing backgrounds and is not a functional profile nor a real user.<br />
+			</span>
+			<span id="footerLogo">
+				<img src="dependencies/footerLogo_valve.png" alt="Valve Logo" border="0" height="26" width="96"></span>
+			<span id="footerText">© Valve Corporation. All rights reserved. All trademarks are 
+property of their respective owners in the US and other countries.<br>
+				Some geospatial data on this website is provided by <a href="#" target="_blank">geonames.org</a>.			
+				<br>
+				<span class="valve_links">
+					<a href="#" target="_blank">Privacy Policy</a> | <a href="#" target="_blank">Legal</a> | <a href="#" target="_blank">Steam Subscriber Agreement</a>
+				</span>
+			</span>
+		</div>
+	</div>
+	<div style="display: none;" class="miniprofile_hover">
+		<div class="shadow_ul"></div>
+		<div class="shadow_top"></div>
+		<div class="shadow_ur"></div>
+		<div class="shadow_left"></div>
+		<div class="shadow_right"></div>
+		<div class="shadow_bl"></div>
+		<div class="shadow_bottom"></div>
+		<div class="shadow_br"></div>
+		<div class="miniprofile_hover_inner shadow_content"></div>
+		<div class="hover_arrow left miniprofile_arrow">
+			<div class="miniprofile_arrow_inner"></div>
+		</div>
+		<div class="hover_arrow right miniprofile_arrow">
+			<div class="miniprofile_arrow_inner"></div>
+		</div>
+	</div>
+</body>
+</html>
